@@ -1,0 +1,105 @@
+~ is working directory/home
+$ is prompt
+
+Paths are like addresses, they represent the locations in a file system and go from general to specific.
+     A path is absolute when it starts with /
+     A path is relative when it does not
+     Spaces cause breaks need to be fixed
+     can use an escape character \
+     can enclose in "" or ''
+
+All OS spread files into directories.
+     cd changes path can be relative or absolute
+     cd / takes you to top most container (root)
+     root is restricted to admin, everything is contained there
+
+Many commands can have their behavior modified with flags
+     Flags changes behavior in minor ways
+     Flags can be combined behind a single - for more complex changes
+
+Pipes
+     you can use a | cmd to take the output from one command and use it as the input for the second.
+     These can be chained together.
+
+Naming Conventions
+     Spaces
+          Try not to use spaces, instead use - or _ in names
+          This helps eliminate issues and makes your files play nicely with the OS.
+     Case Sensitive
+          LINUX is case sensitive for file names
+          OSX and Windows are cas insensitive this is to be more user friendly
+          Best practice is all lowercase (javaScript camelCase)
+
+Useful Commands
+
+
+q quits man and other pagers
+
+ctrl+c kills infinite loops etc
+
+file name or dir starts with . is hidden
+
+~ turns blue in prompt when command runs properly
+
+#unix name displayed
+uname
+
+#update homebrew
+brew update
+
+#will tell you if you need to update homebrew
+brew doctor
+
+#installs program using homebrew
+brew install <formula>
+
+#shows you what shell you are running
+echo $SHELL
+
+#update fish auto completes
+fish_update_completions
+
+#open file in sublime
+subl <file>
+
+#list directory contents (can add path to show contents of path)
+ls
+  -t = shows most recently modified first
+  -l = long format
+  -r = reversed order
+
+#fish shortcut for long list with rounded file sizes
+ll
+
+#print working directory
+pwd
+
+#change directory (no path or ~ takes you home, / takes you to root)
+cd <path>
+  .. = up one level
+  ../.. = up two levels etc.
+  tab will show you what dir are available
+
+#provides manual for other commands
+man <cmd>
+
+#prints out all entry history in reverse order
+history
+
+#pager that allows you to scroll through text
+less
+
+#takes out put from cmd before | and uses it as input for cmd after (can be chained)
+cmd | cmd
+
+#takes a command and puts output to a file
+cmd > path
+
+#puts output of cmd at the end of the file instead of overwriting
+cmd >> path
+
+#puts value/output in terminal
+echo
+
+#prints file contents on the terminal
+cat <file>

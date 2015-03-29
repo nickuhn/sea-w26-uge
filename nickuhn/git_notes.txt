@@ -1,0 +1,122 @@
+Repository:
+     Where you can store files and their changes over time
+     Creates a working history of your project.
+     Allows for easy collaboration each member of team can clone and work on their own then merge
+     changes
+     Allows you to “roll back” to a previous stable version easily discarding changes
+
+The Git Cycle:
+     initialize the repository
+     Modify Files > Add to staging area > Commit staging area
+     Repeat till shiny project jumps out
+
+Each Git commit has the following:
+     changes
+     timestamp
+     signature
+     id
+     message
+
+ID
+     ID is a complex hex string that is almost guaranteed to be unique
+     Common practice is to only use the first few digits when referring to the commit due to this randomness
+     Each commit gets it’s own ID
+
+Message
+     Messages should be used with every commit
+     These should be short specific notes about what changes were made requiring a new commit
+     Common practice is to start with an active verb ex. “Added note about messages"
+
+Signature
+     Signature includes the name and email address of the person who performed the commit
+
+Labels
+     When you initialize a repo it creates a master label.
+     Creating a commit also creates a head label.
+     These labels point at the most recent commit.
+     We can create more labels, these are called branches.
+     Master is the default branch.
+     New branches point to latest commit.
+     HEAD always points to leading commit on active branch
+     Merging branches moves labels to current commit does not move files
+
+Github
+
+Github is a remote repository for gits
+Allows you to send and receive .gits
+This is referred to as pushing and pulling
+
+Useful Git Commands
+
+
+#gives current version of git installed
+git --version
+
+#set name in git
+git config --global user.name 'Name'
+
+#set email in git
+git config --global user.email 'email'
+
+#creates git repository in current dir
+git init
+
+#show status of current staging area
+git status
+
+#adds file to staging area
+git add <file>
+
+#removes file from staging area
+git rm --cached <file>
+
+#commits staging area with message creating permanent snapshot of file
+git commit -m "message"
+
+#shows us the info for commits
+git log
+
+#lists commits in long format
+git ll
+
+#lists all very in depth with changes in a pager
+git la
+
+#roll back to previous version of file
+git checkout -- <file>
+
+#unstages file
+git reset HEAD <file>
+
+#shows changes prior to adding to staging area
+git df
+
+#creates new branch pointing at latest commit
+git branch <branch name>
+
+#lists branches * means active
+git branch
+
+#changes active branch
+git checkout <branch name>
+
+#Merges branch with current branch
+git merge <branch>
+
+#deletes branch can not be active branch
+git branch -d git-notes
+
+#display remote key and value
+git remote -v
+
+#initialize remote repo named origin at url
+git remote add origin url
+
+#push current branch to remote -u flag allows for shortcut
+git push -u origin master
+
+#shortcut push (puts current commit onto github)
+git push
+
+#pulls latest commit from github
+git pull
